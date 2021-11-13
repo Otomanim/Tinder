@@ -16,6 +16,7 @@
 		3F015F022740167A00E3E8D5 /* TinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F012740167A00E3E8D5 /* TinderTests.swift */; };
 		3F015F0C2740167A00E3E8D5 /* TinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F0B2740167A00E3E8D5 /* TinderUITests.swift */; };
 		3F015F0E2740167A00E3E8D5 /* TinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F0D2740167A00E3E8D5 /* TinderUITestsLaunchTests.swift */; };
+		3F015F1C2740178700E3E8D5 /* CombineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F1B2740178700E3E8D5 /* CombineVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3F015F072740167A00E3E8D5 /* TinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F015F0B2740167A00E3E8D5 /* TinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUITests.swift; sourceTree = "<group>"; };
 		3F015F0D2740167A00E3E8D5 /* TinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F015F1B2740178700E3E8D5 /* CombineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		3F015EE92740167000E3E8D5 /* Tinder */ = {
 			isa = PBXGroup;
 			children = (
+				3F015F1A2740170800E3E8D5 /* Controller */,
 				3F015EEA2740167000E3E8D5 /* AppDelegate.swift */,
 				3F015EEC2740167000E3E8D5 /* SceneDelegate.swift */,
 				3F015EEE2740167000E3E8D5 /* ViewController.swift */,
@@ -125,6 +128,14 @@
 				3F015F0D2740167A00E3E8D5 /* TinderUITestsLaunchTests.swift */,
 			);
 			path = TinderUITests;
+			sourceTree = "<group>";
+		};
+		3F015F1A2740170800E3E8D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F015F1B2740178700E3E8D5 /* CombineVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F015F1C2740178700E3E8D5 /* CombineVC.swift in Sources */,
 				3F015EEF2740167000E3E8D5 /* ViewController.swift in Sources */,
 				3F015EEB2740167000E3E8D5 /* AppDelegate.swift in Sources */,
 				3F015EED2740167000E3E8D5 /* SceneDelegate.swift in Sources */,
