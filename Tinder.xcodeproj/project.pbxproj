@@ -17,6 +17,12 @@
 		3F015F0C2740167A00E3E8D5 /* TinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F0B2740167A00E3E8D5 /* TinderUITests.swift */; };
 		3F015F0E2740167A00E3E8D5 /* TinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F0D2740167A00E3E8D5 /* TinderUITestsLaunchTests.swift */; };
 		3F015F1C2740178700E3E8D5 /* CombineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F1B2740178700E3E8D5 /* CombineVC.swift */; };
+		3F015F1F274023A100E3E8D5 /* CombineCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F1E274023A100E3E8D5 /* CombineCardView.swift */; };
+		3F015F242742B79100E3E8D5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F232742B79100E3E8D5 /* UIView.swift */; };
+		3F015F262742C1E300E3E8D5 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F252742C1E300E3E8D5 /* UILabel.swift */; };
+		3F015F292742C97600E3E8D5 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F282742C97600E3E8D5 /* Usuario.swift */; };
+		3F015F2E2742CCC800E3E8D5 /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F2D2742CCC700E3E8D5 /* UsuarioService.swift */; };
+		3F015F302743049A00E3E8D5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F2F2743049A00E3E8D5 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		3F015F0B2740167A00E3E8D5 /* TinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUITests.swift; sourceTree = "<group>"; };
 		3F015F0D2740167A00E3E8D5 /* TinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3F015F1B2740178700E3E8D5 /* CombineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineVC.swift; sourceTree = "<group>"; };
+		3F015F1E274023A100E3E8D5 /* CombineCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCardView.swift; sourceTree = "<group>"; };
+		3F015F232742B79100E3E8D5 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		3F015F252742C1E300E3E8D5 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		3F015F282742C97600E3E8D5 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		3F015F2D2742CCC700E3E8D5 /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsuarioService.swift; path = ../../../../Downloads/UsuarioService.swift; sourceTree = "<group>"; };
+		3F015F2F2743049A00E3E8D5 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,10 @@
 		3F015EE92740167000E3E8D5 /* Tinder */ = {
 			isa = PBXGroup;
 			children = (
+				3F015F2A2742CAB100E3E8D5 /* Service */,
+				3F015F272742C95E00E3E8D5 /* Model */,
+				3F015F202742B52100E3E8D5 /* Lib */,
+				3F015F1D2740238000E3E8D5 /* View */,
 				3F015F1A2740170800E3E8D5 /* Controller */,
 				3F015EEA2740167000E3E8D5 /* AppDelegate.swift */,
 				3F015EEC2740167000E3E8D5 /* SceneDelegate.swift */,
@@ -136,6 +152,40 @@
 				3F015F1B2740178700E3E8D5 /* CombineVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F015F1D2740238000E3E8D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F015F1E274023A100E3E8D5 /* CombineCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F015F202742B52100E3E8D5 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				3F015F232742B79100E3E8D5 /* UIView.swift */,
+				3F015F252742C1E300E3E8D5 /* UILabel.swift */,
+				3F015F2F2743049A00E3E8D5 /* UIImageView.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		3F015F272742C95E00E3E8D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F015F282742C97600E3E8D5 /* Usuario.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F015F2A2742CAB100E3E8D5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3F015F2D2742CCC700E3E8D5 /* UsuarioService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +319,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F015F292742C97600E3E8D5 /* Usuario.swift in Sources */,
+				3F015F2E2742CCC800E3E8D5 /* UsuarioService.swift in Sources */,
 				3F015F1C2740178700E3E8D5 /* CombineVC.swift in Sources */,
 				3F015EEF2740167000E3E8D5 /* ViewController.swift in Sources */,
+				3F015F262742C1E300E3E8D5 /* UILabel.swift in Sources */,
+				3F015F1F274023A100E3E8D5 /* CombineCardView.swift in Sources */,
+				3F015F302743049A00E3E8D5 /* UIImageView.swift in Sources */,
 				3F015EEB2740167000E3E8D5 /* AppDelegate.swift in Sources */,
+				3F015F242742B79100E3E8D5 /* UIView.swift in Sources */,
 				3F015EED2740167000E3E8D5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
