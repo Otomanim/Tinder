@@ -23,6 +23,7 @@
 		3F015F292742C97600E3E8D5 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F282742C97600E3E8D5 /* Usuario.swift */; };
 		3F015F2E2742CCC800E3E8D5 /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F2D2742CCC700E3E8D5 /* UsuarioService.swift */; };
 		3F015F302743049A00E3E8D5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F2F2743049A00E3E8D5 /* UIImageView.swift */; };
+		3F015F3227430C6000E3E8D5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F3127430C6000E3E8D5 /* UIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3F015F282742C97600E3E8D5 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		3F015F2D2742CCC700E3E8D5 /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsuarioService.swift; path = ../../../../Downloads/UsuarioService.swift; sourceTree = "<group>"; };
 		3F015F2F2743049A00E3E8D5 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		3F015F3127430C6000E3E8D5 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				3F015F232742B79100E3E8D5 /* UIView.swift */,
 				3F015F252742C1E300E3E8D5 /* UILabel.swift */,
 				3F015F2F2743049A00E3E8D5 /* UIImageView.swift */,
+				3F015F3127430C6000E3E8D5 /* UIButton.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				3F015F1F274023A100E3E8D5 /* CombineCardView.swift in Sources */,
 				3F015F302743049A00E3E8D5 /* UIImageView.swift in Sources */,
 				3F015EEB2740167000E3E8D5 /* AppDelegate.swift in Sources */,
+				3F015F3227430C6000E3E8D5 /* UIButton.swift in Sources */,
 				3F015F242742B79100E3E8D5 /* UIView.swift in Sources */,
 				3F015EED2740167000E3E8D5 /* SceneDelegate.swift in Sources */,
 			);

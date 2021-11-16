@@ -5,28 +5,79 @@
 //  Created by Evandro Rodrigo Minamoto on 13/11/21.
 //
 
-import Foundation
 import UIKit
 
+enum Acao {
+    case deslike
+    case superlike
+    case like
+}
+
 class CombineVC: UIViewController {
+    
+    var perfilButton: UIButton = .iconMenu(named: "icone-perfil")
+    var chatButton: UIButton = .iconMenu(named: "icone-chat")
+    var logoButton: UIButton = .iconMenu(named: "icone-logo")
+    
+    var deslikeButton: UIButton = .iconFooter(named: "icone-deslike")
+    var superlikeButton: UIButton = .iconFooter(named: "icone-superlike")
+    var likeButton: UIButton = .iconFooter(named: "icone-like")
     
     var usuarios: [Usuario] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.isHidden = true
         view.backgroundColor = UIColor.systemGroupedBackground
         
-        
+        self.adicionaHeader()
+        self.adicionarFooter()
         self.buscaUsuarios()
     }
     
     func buscaUsuarios () {
         self.usuarios = UsuarioService.shared.buscaUsuarios()
         self.adicionarCards()
-        print(self.usuarios)
+        //        print(self.usuarios)
     }
 }
+extension CombineVC {
+    func adicionaHeader (){
+        
+        
+        let stackView = UIStackView(arrangedSubviews: [perfilButton, logoButton, chatButton])
+        stackView.distribution = .equalCentering
+        
+        view.addSubview(stackView)
+        stackView.preencher(
+            top: view.topAnchor,
+            leading: view.leadingAnchor,
+            trailing: view.trailingAnchor,
+            bottom: nil,
+            padding: .init(top: 44, left: 16, bottom: 0, right: 16)
+        )
+    }
+    
+    func adicionarFooter () {
+        let stackView = UIStackView(arrangedSubviews: [UIView(), deslikeButton, superlikeButton, likeButton, UIView()])
+        stackView.distribution = .equalCentering
+        
+        view.addSubview(stackView)
+        stackView.preencher(
+            top: nil,
+            leading: view.leadingAnchor,
+            trailing: view.trailingAnchor,
+            bottom: view.bottomAnchor,
+            padding: .init(top: 0, left: 16, bottom: 34, right: 16)
+        )
+        
+        deslikeButton.addTarget(self, action: #selector(deslikeClique), for: .touchUpInside)
+        superlikeButton.addTarget(self, action: #selector(superlikeClique), for: .touchUpInside)
+        likeButton.addTarget(self, action: #selector(likeClique), for: .touchUpInside)
+    }
+}
+
 extension CombineVC {
     func adicionarCards () {
         
@@ -46,6 +97,19 @@ extension CombineVC {
             view.insertSubview(card, at: 0)
         }
         
+    }
+    func removerCard (card: UIView) {
+        card.removeFromSuperview()
+        
+        self.usuarios = self.usuarios.filter({ (usuario) -> Bool in
+            return usuario.id != card.tag
+        })
+    }
+    
+    func verificarMatch (usuario: Usuario) {
+        if usuario.match {
+            print("Wooow")
+        }
     }
 }
 
@@ -67,7 +131,18 @@ extension CombineVC {
             }
             
             card.transform = CGAffineTransform(rotationAngle: rotationAngle)
+            
+            
             if gesture.state == .ended {
+                
+                if card.center.x > self.view.bounds.width + 50 {
+                    self.animarCard(rotationAngle: rotationAngle, acao: .like)
+                    return
+                }
+                if card.center.x < -50 {
+                    self.animarCard(rotationAngle: rotationAngle, acao: .deslike)
+                    return
+                }
                 
                 UIView.animate(withDuration: 0.5){
                     card.center = self.view.center
@@ -77,6 +152,59 @@ extension CombineVC {
                     card.deslikeImageView.alpha = 0
                 }
                 
+            }
+        }
+    }
+    
+    @objc func deslikeClique () {
+        self.animarCard(rotationAngle: -0.4, acao: .deslike)
+    }
+    @objc func likeClique () {
+        self.animarCard(rotationAngle: 0.4, acao: .like)
+    }
+    @objc func superlikeClique () {
+        self.animarCard(rotationAngle: 0, acao: .superlike)
+    }
+    func animarCard (rotationAngle: CGFloat, acao: Acao) {
+        if let usuario = self.usuarios.first {
+            for view in self.view.subviews {
+                if view.tag == usuario.id {
+                    if let card = view as? CombineCardView {
+                        
+                        let center: CGPoint
+                        var like: Bool
+                        
+                        switch acao {
+                        case .deslike:
+                            center = CGPoint(x: card.center.x - self.view.bounds.width, y: card.center.y + 50)
+                            like = false
+                        case . superlike:
+                            center = CGPoint(x: card.center.x, y: card.center.y - self.view.bounds.height)
+                            like = true
+                        case .like:
+                            center = CGPoint(x: card.center.x + self.view.bounds.width, y: card.center.y + 50)
+                            like = true
+                        }
+                        UIView.animate(withDuration: 0.2) {
+                            card.center = center
+                            card.transform = CGAffineTransform(rotationAngle: rotationAngle)
+                        }
+                        UIView.animate(withDuration: 0.2, animations: {
+                            card.center = center
+                            card.transform = CGAffineTransform(rotationAngle: rotationAngle)
+                            
+                            card.deslikeImageView.alpha = like == false ? 1 : 0
+                            card.likeImageView.alpha = like == true ? 1 : 0
+                        }) { (_) in
+                            
+                            if like {
+                                self.verificarMatch(usuario: usuario)
+                            }
+                            
+                            self.removerCard(card: card )
+                        }
+                    }
+                }
             }
         }
     }
