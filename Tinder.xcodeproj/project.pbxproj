@@ -24,6 +24,8 @@
 		3F015F2E2742CCC800E3E8D5 /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F2D2742CCC700E3E8D5 /* UsuarioService.swift */; };
 		3F015F302743049A00E3E8D5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F2F2743049A00E3E8D5 /* UIImageView.swift */; };
 		3F015F3227430C6000E3E8D5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F3127430C6000E3E8D5 /* UIButton.swift */; };
+		3FB08A0E2747E59B00EED5AE /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB08A0D2747E59B00EED5AE /* Loading.swift */; };
+		3FB08A102747FD3400EED5AE /* MatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB08A0F2747FD3300EED5AE /* MatchVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		3F015F2D2742CCC700E3E8D5 /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsuarioService.swift; path = ../../../../Downloads/UsuarioService.swift; sourceTree = "<group>"; };
 		3F015F2F2743049A00E3E8D5 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		3F015F3127430C6000E3E8D5 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		3FB08A0D2747E59B00EED5AE /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		3FB08A0F2747FD3300EED5AE /* MatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				3F015F1B2740178700E3E8D5 /* CombineVC.swift */,
+				3FB08A0F2747FD3300EED5AE /* MatchVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				3F015F1E274023A100E3E8D5 /* CombineCardView.swift */,
+				3FB08A0D2747E59B00EED5AE /* Loading.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +338,8 @@
 				3F015EEB2740167000E3E8D5 /* AppDelegate.swift in Sources */,
 				3F015F3227430C6000E3E8D5 /* UIButton.swift in Sources */,
 				3F015F242742B79100E3E8D5 /* UIView.swift in Sources */,
+				3FB08A102747FD3400EED5AE /* MatchVC.swift in Sources */,
+				3FB08A0E2747E59B00EED5AE /* Loading.swift in Sources */,
 				3F015EED2740167000E3E8D5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
