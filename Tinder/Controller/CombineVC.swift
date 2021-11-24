@@ -99,6 +99,10 @@ extension CombineVC {
             card.usuario = usuario
             card.tag = usuario.id
             
+            card.callBack = { (data) in
+                self.visualizarDetalhe(usuario: data)
+            }
+            
             let gesture = UIPanGestureRecognizer()
             gesture.addTarget(self, action: #selector(handlerCard))
             
@@ -108,6 +112,7 @@ extension CombineVC {
         }
         
     }
+    
     func removerCard (card: UIView) {
         card.removeFromSuperview()
         
@@ -126,6 +131,24 @@ extension CombineVC {
             
             self.present(matchVC,animated: true, completion: nil)
         }
+    }
+    
+    func visualizarDetalhe (usuario: Usuario) {
+        let detalheVC = DetalheVC()
+        detalheVC.usuario = usuario
+        detalheVC.modalPresentationStyle = .fullScreen
+        
+        detalheVC.callback = { (usuario, acao) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                if acao == .deslike {
+                    self.deslikeClique()
+                } else {
+                    self.likeClique()
+                }
+            }
+        }
+        
+        self.present(detalheVC, animated: true, completion: nil)
     }
 }
 
@@ -175,12 +198,14 @@ extension CombineVC {
     @objc func deslikeClique () {
         self.animarCard(rotationAngle: -0.4, acao: .deslike)
     }
+    
     @objc func likeClique () {
         self.animarCard(rotationAngle: 0.4, acao: .like)
     }
     @objc func superlikeClique () {
         self.animarCard(rotationAngle: 0, acao: .superlike)
     }
+    
     func animarCard (rotationAngle: CGFloat, acao: Acao) {
         if let usuario = self.usuarios.first {
             for view in self.view.subviews {
