@@ -97,7 +97,7 @@ class DetalheVC: UICollectionViewController {
     func adicionarVoltar () {
         
         voltarButton.frame = CGRect(
-            x: view.bounds.width - 69,
+            x: view.bounds.width + 320,
             y: view.bounds.height * 0.7 - 24,
             width: 48,
             height: 48
@@ -105,6 +105,7 @@ class DetalheVC: UICollectionViewController {
         voltarButton.layer.cornerRadius = 24
         voltarButton.addTarget(self, action: #selector(voltarClique), for: .touchUpInside)
         view.addSubview(voltarButton)
+//        view.bringSubviewToFront(voltarButton)
     }
     
     func adicionarFooter() {
