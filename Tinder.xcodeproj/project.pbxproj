@@ -21,9 +21,9 @@
 		3F015F242742B79100E3E8D5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F232742B79100E3E8D5 /* UIView.swift */; };
 		3F015F262742C1E300E3E8D5 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F252742C1E300E3E8D5 /* UILabel.swift */; };
 		3F015F292742C97600E3E8D5 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F282742C97600E3E8D5 /* Usuario.swift */; };
-		3F015F2E2742CCC800E3E8D5 /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F2D2742CCC700E3E8D5 /* UsuarioService.swift */; };
 		3F015F302743049A00E3E8D5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F2F2743049A00E3E8D5 /* UIImageView.swift */; };
 		3F015F3227430C6000E3E8D5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F015F3127430C6000E3E8D5 /* UIButton.swift */; };
+		3F3F5768287DCE59009A49E3 /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3F5767287DCE58009A49E3 /* UsuarioService.swift */; };
 		3FB08A0E2747E59B00EED5AE /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB08A0D2747E59B00EED5AE /* Loading.swift */; };
 		3FB08A102747FD3400EED5AE /* MatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB08A0F2747FD3300EED5AE /* MatchVC.swift */; };
 		3FB08A122748377C00EED5AE /* DetalheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB08A112748377C00EED5AE /* DetalheVC.swift */; };
@@ -70,9 +70,9 @@
 		3F015F232742B79100E3E8D5 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3F015F252742C1E300E3E8D5 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		3F015F282742C97600E3E8D5 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
-		3F015F2D2742CCC700E3E8D5 /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsuarioService.swift; path = ../../../../Downloads/UsuarioService.swift; sourceTree = "<group>"; };
 		3F015F2F2743049A00E3E8D5 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		3F015F3127430C6000E3E8D5 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		3F3F5767287DCE58009A49E3 /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
 		3FB08A0D2747E59B00EED5AE /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		3FB08A0F2747FD3300EED5AE /* MatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVC.swift; sourceTree = "<group>"; };
 		3FB08A112748377C00EED5AE /* DetalheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheVC.swift; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 		3F015F2A2742CAB100E3E8D5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				3F015F2D2742CCC700E3E8D5 /* UsuarioService.swift */,
+				3F3F5767287DCE58009A49E3 /* UsuarioService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -348,7 +348,6 @@
 			files = (
 				3FCA48B2274D87D900E629E8 /* SlideFotosVC.swift in Sources */,
 				3F015F292742C97600E3E8D5 /* Usuario.swift in Sources */,
-				3F015F2E2742CCC800E3E8D5 /* UsuarioService.swift in Sources */,
 				3F015F1C2740178700E3E8D5 /* CombineVC.swift in Sources */,
 				3F015EEF2740167000E3E8D5 /* ViewController.swift in Sources */,
 				3F015F262742C1E300E3E8D5 /* UILabel.swift in Sources */,
@@ -358,6 +357,7 @@
 				3F015EEB2740167000E3E8D5 /* AppDelegate.swift in Sources */,
 				3F015F3227430C6000E3E8D5 /* UIButton.swift in Sources */,
 				3FC0936E274D8263009E24D8 /* DetalheFotosCell.swift in Sources */,
+				3F3F5768287DCE59009A49E3 /* UsuarioService.swift in Sources */,
 				3F015F242742B79100E3E8D5 /* UIView.swift in Sources */,
 				3FCA48B4274D8C6B00E629E8 /* SlideFotoCell.swift in Sources */,
 				3FC0936C274D6646009E24D8 /* DetalhePerfilCell.swift in Sources */,
